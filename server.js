@@ -27,6 +27,8 @@ const promptTemplate = PromptTemplate.fromTemplate(
     `explain {topic} in a very simple way like ELI5, make sure to include a core concept and avoid unnecessary jargon. make the answer an concise as possible.`
 )
 
-promptTemplate.pipe(model).invoke({topic: "express"}).then(response => {
+const chain = promptTemplate.pipe(model)
+
+chain.invoke({topic: "mba cet avg persentile for top college in maharastra for obc student in mumbai"}).then(response => {
     console.log(response);
 })
