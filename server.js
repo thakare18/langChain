@@ -29,6 +29,6 @@ const promptTemplate = PromptTemplate.fromTemplate(
 
 const chain = promptTemplate.pipe(model)
 
-chain.invoke({topic: "mba cet avg persentile for top college in maharastra for obc student in mumbai"}).then(response => {
+chain.invoke({topic: "mba cet avg persentile for top college in maharastra for obc student"}).then(response => {
     console.log(response);
 })
